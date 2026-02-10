@@ -1,0 +1,13 @@
+[Unit]
+Description=Website Uptime Telegram Monitor
+After=network.target
+
+[Service]
+User=kithmini
+WorkingDirectory=/home/kithmini/uptime-telegram-monitor
+ExecStart=/home/kithmini/uptime-telegram-monitor/venv/bin/python /home/kithmini/uptime-telegram-monitor/src/monitor.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
